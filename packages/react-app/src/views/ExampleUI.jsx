@@ -1,9 +1,7 @@
-import { Button, Card, DatePicker, Divider, Input, Progress, Slider, Spin, Switch } from "antd";
+import { Button, Divider, Input } from "antd";
 import React, { useState } from "react";
-import { utils } from "ethers";
-import { SyncOutlined } from "@ant-design/icons";
 
-import { Address, Balance, Events } from "../components";
+import { Address, Events } from "../components";
 
 export default function ExampleUI({
   contractState,
@@ -21,7 +19,7 @@ export default function ExampleUI({
 }) {
   const [message, setMessage] = useState("Cheers! 🥂");
 
-  const isPartner = address == partner1 || address == partner2;
+  const isPartner = address === partner1 || address === partner2;
   const witnessReady = contractState && (contractState === 1 || contractState === 2);
 
   return (
@@ -48,7 +46,7 @@ export default function ExampleUI({
           {isPartner ? (
             <Button
               style={{ marginTop: 8 }}
-              disabled={contractState != 0 || consent}
+              disabled={contractState !== 0 || consent}
               onClick={async () => {
                 /* look how you call setPurpose on your contract: */
                 /* notice how you pass a call back for tx updates too */
