@@ -37,7 +37,7 @@ module.exports = async ({ getNamedAccounts, deployments, getChainId }) => {
     "ipfs://QmamJSHKX6nGVVBqkbjKXKfcHYb23NNRuBuFgTheTn2M42"
   );
   await YourContract.transferOwnership(
-    "0x7cf0e8cBE0Fb6Af5a2FC367017dC7A4A5bd5Ec38"
+    "0x7D08c4006447aBa181566Fa682F310B7eC781724"
   );
   /*  await YourContract.setPurpose("Hello");
   
