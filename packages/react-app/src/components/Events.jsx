@@ -1,8 +1,7 @@
 import { List } from "antd";
 import { useEventListener } from "eth-hooks/events/useEventListener";
-import { CSVLink} from "react-csv";
+import { CSVLink } from "react-csv";
 import Address from "./Address";
-
 
 /**
   ~ What it does? ~

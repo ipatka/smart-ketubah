@@ -54,7 +54,7 @@ const { ethers } = require("ethers");
 */
 
 /// 📡 What chain are your contracts deployed to?
-const initialNetwork = NETWORKS.rinkeby; // <------- select your target frontend network (localhost, rinkeby, xdai, mainnet)
+const initialNetwork = NETWORKS.mainnet; // <------- select your target frontend network (localhost, rinkeby, xdai, mainnet)
 
 // 😬 Sorry for all the console logging
 const DEBUG = false;
@@ -329,10 +329,9 @@ function App(props) {
                 this <Contract/> component will automatically parse your ABI
                 and give you a form to interact with it locally
             */}
-      <div style={{ border: "1px solid #cccccc", padding: 16, width: 600, margin: "auto", marginTop: 64 }}>
-
-          <ReactMarkdown>
-            {`# Tronix Ketubah & Constitution
+          <div style={{ border: "1px solid #cccccc", padding: 16, width: 600, margin: "auto", marginTop: 64 }}>
+            <ReactMarkdown>
+              {`# Tronix Ketubah & Constitution
 
 ## Metadata
 
@@ -450,8 +449,8 @@ All that is stated and explained above is by joint consent, and was recorded Sep
 
 The marriage being valid and established, this document serves as a continuous record of the union of Camille and Benjamin and the journey of the Tronix dynasty.
 `}
-          </ReactMarkdown>
-            </div>
+            </ReactMarkdown>
+          </div>
         </Route>
         <Route exact path="/debug">
           {/*

@@ -22,7 +22,7 @@ export default function ExampleUI({
   const [message, setMessage] = useState("Cheers! 🥂");
 
   const isPartner = address == partner1 || address == partner2;
-  const witnessReady = contractState && ((contractState === 1) || (contractState === 2))
+  const witnessReady = contractState && (contractState === 1 || contractState === 2);
 
   return (
     <div>
@@ -48,7 +48,7 @@ export default function ExampleUI({
           {isPartner ? (
             <Button
               style={{ marginTop: 8 }}
-              disabled={(contractState != 0) || consent}
+              disabled={contractState != 0 || consent}
               onClick={async () => {
                 /* look how you call setPurpose on your contract: */
                 /* notice how you pass a call back for tx updates too */

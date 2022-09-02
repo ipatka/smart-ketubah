@@ -1566,6 +1566,10 @@ module.exports = {
         address: "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
         abi: ERC20ABI,
       },
+      SmartKetubah: {
+        address: "0x7a748f32c2e2ddebc83148618bc41c4c45a560dd",
+        abi: KetubahABI,
+      },
     },
   },
   4: {
